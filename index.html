@@ -1497,15 +1497,6 @@ document.addEventListener('mousemove', e=>{
     gsap.to('.orb3',{ x:px*14-7,  y:-py*14+7, duration:2.5, ease:'power2.out' });
 });
 
-/* ── CLEAN ANCHOR SCROLL (no hash in URL) ── */
-document.addEventListener('click', e => {
-    const a = e.target.closest('a[href^="#"]');
-    if (!a) return;
-    e.preventDefault();
-    const target = document.querySelector(a.getAttribute('href'));
-    if (target) target.scrollIntoView({ behavior: 'smooth' });
-});
-
 /* ── CONTACT ITEM HOVER GLOW ── */
 document.querySelectorAll('.cinfo').forEach(el=>{
     el.addEventListener('mouseenter',()=>{
