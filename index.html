@@ -831,6 +831,10 @@
         }
 
         /* ──────────────── RESPONSIVE ──────────────── */
+        @media (hover: none), (pointer: coarse) {
+            body { cursor: auto; }
+            #cursor, #cursor-ring { display: none; }
+        }
         @media (max-width: 960px) {
             nav { padding: 1.2rem 1.5rem; }
             nav.scrolled { padding: .8rem 1.5rem; }
@@ -1322,12 +1326,14 @@ function startHero() {
     scene.add(ring);
 
 
-    // ── Mouse tilt ──
+    // ── Mouse tilt (desktop only) ──
     let tRx=0, tRy=0;
-    document.addEventListener('mousemove', e => {
-        tRy = (e.clientX/innerWidth  - .5) *  .9;
-        tRx = (e.clientY/innerHeight - .5) * -.55;
-    });
+    if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+        document.addEventListener('mousemove', e => {
+            tRy = (e.clientX/innerWidth  - .5) *  .9;
+            tRx = (e.clientY/innerHeight - .5) * -.55;
+        });
+    }
 
     const clock = new THREE.Clock();
     (function tick() {
