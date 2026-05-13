@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kelan — Premium Web Design</title>
     <meta name="description" content="Premium websites for any business, built by Kelan. Affordable prices, exceptional results.">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%2304060f'/><rect width='32' height='32' rx='7' fill='none' stroke='%23c9a96e' stroke-width='1.5' opacity='.4'/><text x='50%' y='50%' text-anchor='middle' dominant-baseline='central' font-family='Georgia,serif' font-weight='700' font-size='21' fill='%23c9a96e'>K</text></svg>">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1494,6 +1495,15 @@ document.addEventListener('mousemove', e=>{
     gsap.to('.orb1',{ x:px*28-14, y:py*28-14, duration:2.5, ease:'power2.out' });
     gsap.to('.orb2',{ x:-px*18+9, y:-py*18+9, duration:2.5, ease:'power2.out' });
     gsap.to('.orb3',{ x:px*14-7,  y:-py*14+7, duration:2.5, ease:'power2.out' });
+});
+
+/* ── CLEAN ANCHOR SCROLL (no hash in URL) ── */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+        e.preventDefault();
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) target.scrollIntoView({ behavior: 'smooth' });
+    });
 });
 
 /* ── CONTACT ITEM HOVER GLOW ── */
