@@ -97,13 +97,15 @@
             z-index: 200;
             padding: 1.5rem 3rem;
             display: flex; align-items: center; justify-content: space-between;
-            transition: padding .4s, background .4s, border .4s;
+            backdrop-filter: blur(0px);
+            border-bottom: 1px solid transparent;
+            transition: padding .4s, background .4s, border-color .4s, backdrop-filter .4s;
         }
         nav.scrolled {
             padding: .9rem 3rem;
             background: rgba(4,6,15,.85);
             backdrop-filter: blur(18px);
-            border-bottom: 1px solid var(--card-bd);
+            border-color: var(--card-bd);
         }
         .nav-logo {
             font-size: 1.2rem; font-weight: 700;
