@@ -967,7 +967,7 @@
                     </div>
                     <div class="prev-overlay"></div>
                     <div class="prev-frame-wrap">
-                        <iframe class="prev-frame" src="https://crystal-clear-windows-ten.vercel.app/" title="Crystal Clear" loading="lazy" sandbox="allow-scripts allow-same-origin"></iframe>
+                        <iframe class="prev-frame" scrolling="no" src="https://crystal-clear-windows-ten.vercel.app/" title="Crystal Clear" loading="lazy" sandbox="allow-scripts allow-same-origin"></iframe>
                     </div>
                 </div>
             </div>
@@ -1012,7 +1012,7 @@
                     </div>
                     <div class="prev-overlay"></div>
                     <div class="prev-frame-wrap">
-                        <iframe class="prev-frame" src="https://boom-coffee-eight.vercel.app/" title="Boom Coffee" loading="lazy" sandbox="allow-scripts allow-same-origin"></iframe>
+                        <iframe class="prev-frame" scrolling="no" src="https://boom-coffee-eight.vercel.app/" title="Boom Coffee" loading="lazy" sandbox="allow-scripts allow-same-origin"></iframe>
                     </div>
                 </div>
             </div>
@@ -1056,7 +1056,7 @@
                     </div>
                     <div class="prev-overlay"></div>
                     <div class="prev-frame-wrap">
-                        <iframe class="prev-frame" src="https://jj-cleaning-services.vercel.app/" title="JJ Cleaning Services" loading="lazy" sandbox="allow-scripts allow-same-origin"></iframe>
+                        <iframe class="prev-frame" scrolling="no" src="https://jj-cleaning-services.vercel.app/" title="JJ Cleaning Services" loading="lazy" sandbox="allow-scripts allow-same-origin"></iframe>
                     </div>
                 </div>
             </div>
@@ -1100,7 +1100,7 @@
                     </div>
                     <div class="prev-overlay"></div>
                     <div class="prev-frame-wrap">
-                        <iframe class="prev-frame" src="https://dmc-website-peach.vercel.app/" title="DMC Gardening" loading="lazy" sandbox="allow-scripts allow-same-origin"></iframe>
+                        <iframe class="prev-frame" scrolling="no" src="https://dmc-website-peach.vercel.app/" title="DMC Gardening" loading="lazy" sandbox="allow-scripts allow-same-origin"></iframe>
                     </div>
                 </div>
             </div>
@@ -1144,7 +1144,7 @@
                     </div>
                     <div class="prev-overlay"></div>
                     <div class="prev-frame-wrap">
-                        <iframe class="prev-frame" src="https://sparkleclean-cyan.vercel.app/" title="Sparkle Clean" loading="lazy" sandbox="allow-scripts allow-same-origin"></iframe>
+                        <iframe class="prev-frame" scrolling="no" src="https://sparkleclean-cyan.vercel.app/" title="Sparkle Clean" loading="lazy" sandbox="allow-scripts allow-same-origin"></iframe>
                     </div>
                 </div>
             </div>
@@ -1528,16 +1528,27 @@ gsap.to(['#ps1','#ps2','#ps3'], {
 });
 
 /* ── IFRAME SCALE ── */
+// Fit a 900px-tall desktop viewport to the wrap's height so the preview
+// fills it edge to edge; never let the virtual width drop below a laptop.
+function scaleFrame(wrap) {
+    const frame = wrap.querySelector('.prev-frame');
+    if(!frame) return;
+    const w = wrap.offsetWidth, h = wrap.offsetHeight;
+    let s = h / 900, vw = w / s, vh = 900;
+    if(vw < 1024){ vw = 1024; s = w / vw; vh = h / s; }
+    frame.style.width  = vw + 'px';
+    frame.style.height = vh + 'px';
+    frame.style.transform = `scale(${s})`;
+}
 function scaleFrames() {
-    document.querySelectorAll('.prev-frame-wrap').forEach(wrap=>{
-        const frame = wrap.querySelector('.prev-frame');
-        if(!frame) return;
-        const s = wrap.offsetWidth / 1440;
-        frame.style.transform = `scale(${s})`;
-    });
+    document.querySelectorAll('.prev-frame-wrap').forEach(scaleFrame);
 }
 scaleFrames();
 window.addEventListener('resize', scaleFrames);
+if('ResizeObserver' in window){
+    const ro = new ResizeObserver(entries => entries.forEach(e => scaleFrame(e.target)));
+    document.querySelectorAll('.prev-frame-wrap').forEach(wrap => ro.observe(wrap));
+}
 
 /* ── CARD 3-D TILT ── */
 document.querySelectorAll('.proj-card').forEach(card=>{
