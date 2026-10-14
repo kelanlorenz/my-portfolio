@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kelan — Premium Web Design</title>
-    <meta name="description" content="Premium websites for any business, built by Kelan. Affordable prices, exceptional results.">
+    <meta name="description" content="Kelan builds your business a custom website for free. See the finished site first, then decide whether to buy it — no upfront cost, no obligation.">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%2304060f'/><rect width='32' height='32' rx='7' fill='none' stroke='%23c9a96e' stroke-width='1.5' opacity='.4'/><text x='50%' y='50%' text-anchor='middle' dominant-baseline='central' font-family='Georgia,serif' font-weight='700' font-size='21' fill='%23c9a96e'>K</text></svg>">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -330,25 +330,6 @@
         }
         .ticker-item span { color: var(--gold); font-size: .65rem; }
         @keyframes ticker { from{transform:translateX(0)} to{transform:translateX(-50%)} }
-
-        /* ──────────────── STATS ──────────────── */
-        .stats-row {
-            display: grid; grid-template-columns: repeat(3,1fr);
-            gap: 1px; background: var(--card-bd);
-        }
-        .stat-cell {
-            background: var(--bg); padding: 4rem 3rem;
-            text-align: center;
-        }
-        .stat-num {
-            display: block;
-            font-size: clamp(3rem,6vw,5rem);
-            font-weight: 700; letter-spacing: -.04em;
-            background: linear-gradient(130deg, var(--gold-lt), var(--gold));
-            -webkit-background-clip: text; background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .stat-lbl { color: var(--text-sub); font-size: .9rem; margin-top: .4rem; }
 
         /* ──────────────── SECTION COMMONS ──────────────── */
         .section { padding: 8rem 3rem; max-width: 1200px; margin: 0 auto; }
@@ -842,7 +823,6 @@
             nav.scrolled { padding: .8rem 1.5rem; }
             .nav-links { display: none; }
             .section { padding: 5rem 1.5rem; }
-            .stats-row { grid-template-columns: 1fr; }
             .proj-inner { grid-template-columns: 1fr; }
             .proj-preview { min-height: 260px; }
             .port-hdr { flex-direction: column; align-items: flex-start; }
@@ -899,7 +879,7 @@
     <div class="hero-glow"></div>
     <div class="hero-grid"></div>
 
-<div class="hero-badge" id="h-badge">Available for New Projects</div>
+<div class="hero-badge" id="h-badge">Built Free · Buy Only If You Love It</div>
 
     <div class="hero-content">
         <h1 class="hero-title">
@@ -913,13 +893,13 @@
             </div>
         </h1>
         <p class="hero-sub" id="h-sub">
-            Premium web design by <strong>Kelan</strong> — a college student turning ambitious ideas into stunning digital experiences.
-            Any business. <span class="gold-glow">Free preview</span> — you only pay if you love it.
-            <span class="gold-glow">Delivered in 1–3 days.</span>
+            I build your website <span class="gold-glow">completely free</span>. You see the finished site,
+            then <span class="gold-glow">you decide whether to buy it</span>. No upfront cost, no obligation.
+            Premium web design by <strong>Kelan</strong>, a college student, for any business. Delivered in 1–3 days.
         </p>
         <div class="hero-ctas" id="h-ctas">
             <a href="#portfolio" class="btn-gold">View My Work</a>
-            <a href="#contact" class="btn-ghost">Start a Project →</a>
+            <a href="#contact" class="btn-ghost">Get Your Free Website →</a>
         </div>
     </div>
 
@@ -936,22 +916,6 @@
     </div>
 </div>
 
-<!-- ─── STATS ─── -->
-<div class="stats-row">
-    <div class="stat-cell">
-        <span class="stat-num" data-target="4" data-suffix="+">0</span>
-        <div class="stat-lbl">Websites Launched</div>
-    </div>
-    <div class="stat-cell">
-        <span class="stat-num" data-target="100" data-suffix="%">0</span>
-        <div class="stat-lbl">Client Satisfaction</div>
-    </div>
-    <div class="stat-cell">
-        <span class="stat-num" data-target="4" data-suffix="+">0</span>
-        <div class="stat-lbl">Happy Clients</div>
-    </div>
-</div>
-
 <!-- ─── PORTFOLIO ─── -->
 <section class="section" id="portfolio">
     <div class="port-hdr">
@@ -959,12 +923,12 @@
             <div class="sec-tag">Selected Work</div>
             <h2 class="sec-title reveal">My Websites</h2>
         </div>
-        <p class="sec-sub reveal">Newest projects first — each site crafted with purpose and precision.</p>
+        <p class="sec-sub reveal">Newest projects first. This is the standard I'll build your site to, for free, before you decide anything.</p>
     </div>
 
     <div class="projects">
 
-        <!-- Boom Coffee (Latest) -->
+        <!-- Crystal Clear (Latest) -->
         <div class="proj-card reveal" id="proj-1">
             <div class="proj-inner">
                 <div class="proj-info">
@@ -972,6 +936,51 @@
                         <div class="proj-meta">
                             <span class="proj-num">01</span>
                             <span class="proj-badge latest">Latest</span>
+                        </div>
+                        <h3 class="proj-name">Crystal Clear</h3>
+                        <p class="proj-desc">
+                            A clean, fast website for an exterior window cleaning
+                            business covering Wicklow and South Dublin. Built to
+                            make getting a quote as easy as a call or a WhatsApp
+                            message, with a real map of the service area.
+                        </p>
+                        <div class="proj-tags">
+                            <span class="tag">Window Cleaning</span>
+                            <span class="tag">Local Business</span>
+                            <span class="tag">Responsive Design</span>
+                            <span class="tag">2026</span>
+                        </div>
+                    </div>
+                    <a href="https://crystal-clear-windows-ten.vercel.app/" target="_blank" rel="noopener" class="proj-link">
+                        Visit Website
+                        <div class="link-circle">
+                            <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
+                                <path d="M1.5 11.5L11.5 1.5M11.5 1.5H4.5M11.5 1.5V8.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+                <div class="proj-preview">
+                    <div class="preview-bar">
+                        <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
+                        <span class="burl">crystal-clear-windows-ten.vercel.app</span>
+                    </div>
+                    <div class="prev-overlay"></div>
+                    <div class="prev-frame-wrap">
+                        <iframe class="prev-frame" src="https://crystal-clear-windows-ten.vercel.app/" title="Crystal Clear" loading="lazy" sandbox="allow-scripts allow-same-origin"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Boom Coffee -->
+        <div class="proj-card reveal" id="proj-2">
+            <div class="proj-inner">
+                <div class="proj-info">
+                    <div>
+                        <div class="proj-meta">
+                            <span class="proj-num">02</span>
+                            <span class="proj-badge">Recent</span>
                         </div>
                         <h3 class="proj-name">Boom Coffee</h3>
                         <p class="proj-desc">
@@ -1010,12 +1019,12 @@
         </div>
 
         <!-- JJ Cleaning Services -->
-        <div class="proj-card reveal" id="proj-2">
+        <div class="proj-card reveal" id="proj-3">
             <div class="proj-inner">
                 <div class="proj-info">
                     <div>
                         <div class="proj-meta">
-                            <span class="proj-num">02</span>
+                            <span class="proj-num">03</span>
                             <span class="proj-badge">Recent</span>
                         </div>
                         <h3 class="proj-name">JJ Cleaning Services</h3>
@@ -1054,12 +1063,12 @@
         </div>
 
         <!-- DMC Gardening -->
-        <div class="proj-card reveal" id="proj-3">
+        <div class="proj-card reveal" id="proj-4">
             <div class="proj-inner">
                 <div class="proj-info">
                     <div>
                         <div class="proj-meta">
-                            <span class="proj-num">03</span>
+                            <span class="proj-num">04</span>
                             <span class="proj-badge">Recent</span>
                         </div>
                         <h3 class="proj-name">DMC Gardening</h3>
@@ -1098,12 +1107,12 @@
         </div>
 
         <!-- Sparkle Clean -->
-        <div class="proj-card reveal" id="proj-4">
+        <div class="proj-card reveal" id="proj-5">
             <div class="proj-inner">
                 <div class="proj-info">
                     <div>
                         <div class="proj-meta">
-                            <span class="proj-num">04</span>
+                            <span class="proj-num">05</span>
                             <span class="proj-badge">First Project</span>
                         </div>
                         <h3 class="proj-name">Sparkle Clean</h3>
@@ -1150,7 +1159,7 @@
 <section class="section" id="services">
     <div class="sec-tag">What I Do</div>
     <h2 class="sec-title reveal">Web Design for<br><em style="font-style:italic;color:var(--gold)">Any Business</em></h2>
-    <p class="sec-sub reveal">From local trades to global brands — I build websites that work hard so you don't have to.</p>
+    <p class="sec-sub reveal">From local trades to global brands, I'll build your site for free, and you only buy it if it's right for you.</p>
 
     <div class="svc-grid">
         <div class="svc-card reveal">
@@ -1266,14 +1275,14 @@
 <!-- ─── CONTACT ─── -->
 <section class="section" id="contact">
     <div class="sec-tag">Get in Touch</div>
-    <h2 class="sec-title reveal">Let's Build<br>Something Great</h2>
+    <h2 class="sec-title reveal">Get Your Website<br>Built for Free</h2>
 
     <div class="contact-grid">
         <div>
             <p class="contact-lead reveal">
-                Have a project in mind? I'd love to hear about it.
-                Give me a call or text directly — I'm always happy to chat
-                about ideas, pricing, or anything else.
+                Tell me about your business and I'll build your website for free.
+                Once it's done, you decide whether to buy it. If it's not for you,
+                you owe nothing. Give me a call or text, I'm always happy to chat.
             </p>
             <a href="tel:+353851288561" class="cinfo reveal">
                 <div class="cinfo-ico">📞</div>
@@ -1286,7 +1295,7 @@
 
         <div class="cta-box reveal">
             <h3>Ready to get started?</h3>
-            <p>Send me a message and I'll reply within 24 hours with a free consultation and quote for your project.</p>
+            <p>Send me a message and I'll reply within 24 hours. I'll build your site for free, and you only pay if you decide to buy it.</p>
             <a href="tel:+353851288561" class="btn-gold" style="display:inline-block;">
                 Call or Text
             </a>
@@ -1326,8 +1335,8 @@ document.querySelectorAll('a,button,.proj-card,.svc-card,.cinfo').forEach(el => 
 
 /* ── TICKER ── */
 const items = [
-    'Premium Web Design','Any Business, Any Industry','Affordable Pricing',
-    'Fast Delivery','Fully Responsive','SEO Optimised','Custom Designs',
+    'Built Free — Buy Only If You Love It','Premium Web Design','Any Business, Any Industry',
+    'No Upfront Cost','Fast Delivery','Fully Responsive','SEO Optimised','Custom Designs',
     'Made in Ireland','College Student','Kelan'
 ];
 const track = document.getElementById('ticker-track');
@@ -1515,22 +1524,6 @@ gsap.to(['#ps1','#ps2','#ps3'], {
         onEnter: () => setTimeout(() => {
             gsap.to(id, { y:-10, duration:2.5+i*.4, ease:'sine.inOut', yoyo:true, repeat:-1, delay:i*.3 });
         }, 900 + i*200)
-    });
-});
-
-/* ── STAT COUNTERS ── */
-document.querySelectorAll('.stat-num').forEach(el=>{
-    const target = +el.dataset.target;
-    const suffix = el.dataset.suffix || '';
-    ScrollTrigger.create({
-        trigger: el, start:'top 80%', once:true,
-        onEnter: ()=>{
-            gsap.fromTo(el, {textContent:0},{
-                textContent:target, duration:1.6, ease:'power2.out',
-                snap:{textContent:1},
-                onUpdate(){ el.textContent = Math.round(this.targets()[0].textContent) + suffix; }
-            });
-        }
     });
 });
 
